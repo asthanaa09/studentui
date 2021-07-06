@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+$appBackground: #e2dcdc;
+
+// Font size:
+$es_primary_font: 10px;
+$es_secondary_font: 12px;
+$es_small_font: 14px;
+$es_large_font: 16px;
+$es_extras_large_font: 18px;
+
+.es-app-body {
+    background-color: $appBackground;
+}
