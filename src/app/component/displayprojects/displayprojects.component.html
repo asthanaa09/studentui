@@ -1,1 +1,18 @@
-<app-data-table></app-data-table>
+<table class="table"*ngIf='projectListData && projectListData.length' >
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr in  *ngFor='let project of projectListData;'>         
+        <th scope="row">{{project.name}}</th>
+        <td>{{project.duration}}</td>
+        <td>{{project.student.name}}</td>       
+        <td><button class="btn btn-primary" (click)="editProject(project.id)">Edit</button></td>
+      </tr>      
+    </tbody>
+  </table>

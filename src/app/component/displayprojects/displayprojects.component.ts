@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-displayprojects',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayprojectsComponent implements OnInit {
 
-  constructor() { }
+  projectListData:any = [];
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
+   this.projectService.getAllProjectList().subscribe((res)=>{
+     this.projectListData = res;
+
+   }); 
+  }
+
+  /**
+   * Method used to edit project details
+   * @param id  project id
+   */
+  editProject(id:Number){
+console.log("id : ",id);
   }
 
 }

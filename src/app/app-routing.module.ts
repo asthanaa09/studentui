@@ -5,14 +5,17 @@ import { AddprojectComponent } from './component/addproject/addproject.component
 import { DisplayprojectsComponent } from './component/displayprojects/displayprojects.component'; 
 
 const routes: Routes = [
-  {path: '', redirectTo: '', pathMatch: 'full'},
+ 
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'projects/add', component: AddprojectComponent},
   {path: 'projects/all', component: DisplayprojectsComponent}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

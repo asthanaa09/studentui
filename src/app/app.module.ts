@@ -8,12 +8,12 @@ import { LoginComponent } from './component/login/login.component';
 import { AddprojectComponent } from './component/addproject/addproject.component';
 import { DisplayprojectsComponent } from './component/displayprojects/displayprojects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DataTableComponent } from './data-table/data-table.component';
-import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectService } from './services/project.service'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StatusComponent } from './component/common/status/status.component';
 
 @NgModule({
   declarations: [
@@ -22,16 +22,17 @@ import { ProjectService } from './services/project.service';
     LoginComponent,
     AddprojectComponent,
     DisplayprojectsComponent,
-    DataTableComponent
+    StatusComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProjectService
